@@ -23,11 +23,25 @@
         margin-top: 20px;
 
     }
+    html, body { 
+        height: 100%; 
+        margin: 0; 
+        overflow: hidden;
+        overflow: clip; 
+        contain: content;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000; 
+    }
+    
 </style>
 <body>
     <form action="" method="POST">
         {% csrf_token %}
-        <input type="text" name="full_url">
+        <input type="url" name="full_url">
         <button type="submit">submit</button>
 
         <p>
